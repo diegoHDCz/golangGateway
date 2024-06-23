@@ -10,6 +10,7 @@ var (
 	ErrEventDateBefore   = errors.New("event data must be in the future")
 	ErrEventCapacity     = errors.New("event capacity must be greater then zero")
 	ErrEventPrice        = errors.New("event capacity must be greater then zero")
+	ErrEventNotFound     = errors.New("event not found")
 )
 
 type Rating string
@@ -28,7 +29,7 @@ type Event struct {
 	Name         string
 	Location     string
 	Organization string
-	Raing        Rating
+	Rating       Rating
 	Date         time.Time
 	ImageURL     string
 	Capacity     int
